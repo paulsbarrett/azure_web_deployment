@@ -1,8 +1,8 @@
 ## Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
   
-  file:///C:\Users\paulb\Downloads\Week-13-ELK-Stack-Project_Resources_README\README\Images\azure_topology_including_ELK_deployment.png
   
+  [Azure Topology including ELK deployment] (file:///C:\Users\paulb\Downloads\Week-13-ELK-Stack-Project_Resources_README\README\Images\azure_topology_including_ELK_deployment.png)
   
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
   - _TODO: Enter the playbook file._
