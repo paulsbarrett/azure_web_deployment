@@ -1,7 +1,7 @@
 ## Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
   
-![Azure Topology including ELK deployment](https://github.com/paulsbarrett/azure_web_deployment/blob/main/azure_topology_including_ELK_deployment.png)
+![Azure Topology including ELK deployment](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/azure_topology_including_ELK_deployment.png)
   
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk-install.yaml file may be used to install only certain pieces of it, such as Filebeat.
   * ansible-playbook install-elk.yml
@@ -45,7 +45,11 @@ A summary of the access policies in place can be found in the table below.
 | Web-1         | No                  | 10.0.0.4                                                  |
 | Web-2         | No                  | 10.0.0.4                                                  |
 | Web-3         | No                  | 10.0.0.4                                                  |
-| Elk-Server    | No                  | 20.188.243.120, 10.0.0.4, 10.0.0.11, 10.0.0.12, 10.0.0.13 | can the JB directly SSH?
+| Elk-Server    | No                  | 20.188.243.120, 10.0.0.4, 10.0.0.11, 10.0.0.12, 10.0.0.13 | 
+
+Note that it is not possible to connect to the Elk-server directly from the Jump Box Provisioner as we have not set a public key to access.
+![Jump box to Elk direct connection denied](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/JB%20to%20Elk%20denied.png)
+
 ### Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the configuration can be automated and run on every machine within your network, that is specified in the .yml file. This way, you can role out to one machine, or dozens of machines. The process can be done individually by logging in to each machine (provided you have ssh access), however this is time consuming.
 The playbook implements the following tasks:
@@ -78,6 +82,6 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 
 
-
+![Jumpbox Successful Connection](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/jumpbox_successful_connection.png)
 
 From the command line, run ssh azadmin@10.1.0.4
