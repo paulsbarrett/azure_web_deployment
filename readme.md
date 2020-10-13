@@ -1,7 +1,7 @@
 ## Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
   
-  [Azure Topology including ELK deployment] (https://github.com/paulsbarrett/azure_web_deployment/blob/main/azure_topology_including_ELK_deployment.png)
+![Azure Topology including ELK deployment](https://github.com/paulsbarrett/azure_web_deployment/blob/main/azure_topology_including_ELK_deployment.png)
   
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk-install.yaml file may be used to install only certain pieces of it, such as Filebeat.
   * ansible-playbook install-elk.yml
