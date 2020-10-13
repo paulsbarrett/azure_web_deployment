@@ -97,11 +97,12 @@ The Hosts file above is available here: ![Ansible Hosts file](https://github.com
 
 ![Jumpbox Successful Connection](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/jumpbox_successful_connection.png)
 
-From the command line, run ssh azadmin@10.1.0.4
-sudo docker start e6c1873a57ef
-sudo docker attach e6c1873a57ef
-ssh azadmin@10.1.0.4 (to connect to Elk-server)
-run exit to return to the docker container.
-ssh azadmin@10.0.0.11 (to connect to Web-1 server)
+From the command line, run 
+- ssh azadmin@10.1.0.4
+- sudo docker start e6c1873a57ef
+- sudo docker attach e6c1873a57ef
+- ssh azadmin@10.1.0.4 (to connect to Elk-server)
+- run exit to return to the docker container.
+- ssh azadmin@10.0.0.11 (to connect to Web-1 server)
 
 
