@@ -2,9 +2,10 @@
 The files in this repository were used to configure the network depicted below.
   
 ![Azure Topology including ELK deployment](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/azure_topology_including_ELK_deployment.png)
-  
+
+**The Full Infrastructure of all Virtual Machines:**
 ![Full Infrastructure](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/Full_Infrastructure_v2.png)  
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk-install.yaml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the install-elk.yml file may be used to install only certain pieces of it, such as Filebeat.
   * ansible-playbook install-elk.yml
 This document contains the following details:
 - Description of the Topology
@@ -65,13 +66,14 @@ The yaml file is available here: ![Config Web VM with Docker](https://github.com
 The Elk Configuration file is available here: ![Configure Elk VM with Docker](https://github.com/paulsbarrett/azure_web_deployment/blob/main/yaml_files/install-elk.yml)
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the following machines:
+This ELK server is configured to monitor the following machines: Web-1, Web-2, Web-3
 - The IP addresses of the machines you I am monitoring include; 10.0.0.11, 10.0.0.12, 10.0.0.13
 
 We have installed the following Beats on these machines:
-- we installed FileBeat and MetricBeat onto the Elk-server
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- I installed FileBeat and MetricBeat onto the Elk-server
+These Beats (services) allow us to collects information from each machine, including system usage, data usage, and system metrics such as uptime and connections.
+- FileBeat collects and forwards log data such as log files and log events, and forwards them to either Elasticsearch or Logstash for indexing.
+- MetricBeat takes the metrics and statistics that it collects and sends them to a analytics engine such as Elasticsearch. Elasticseach can analyse and visualise the data in real time.
 
 The FileBeat Installation and Launch playbook is available here: ![Installing and Launch Filebeat Playbook](https://github.com/paulsbarrett/azure_web_deployment/blob/main/yaml_files/filebeat-playbook.yml)
 
@@ -92,8 +94,6 @@ SSH into the control node and follow the steps below:
 The Hosts file above is available here: ![Ansible Hosts file](https://github.com/paulsbarrett/azure_web_deployment/blob/main/yaml_files/hosts)
 
 **Bonus**
-
-
 
 ![Jumpbox Successful Connection](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/jumpbox_successful_connection.png)
 
