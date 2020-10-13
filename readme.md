@@ -37,6 +37,7 @@ Only the load balancer can accept connections from the Internet. Access to this 
 Machines within the network can only be accessed by SSH via the Jump Box provisioner.
    * The Jump Box provisioner has a public IP address of 52.187.202.203 and a private IP address of 10.0.0.4
 A summary of the access policies in place can be found in the table below.
+
 | Name          | Publicly Accessible | Allowed IP Addresses                                      |
 |---------------|---------------------|-----------------------------------------------------------|
 | Jump Box      | Yes                 | My ISP allocated ISP                                      |
