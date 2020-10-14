@@ -106,6 +106,11 @@ From the command line, run
 - run exit to return to the docker container.
 - ssh azadmin@10.0.0.11 (to connect to Web-1 server)
 
+### Troubleshooting
 - Ensure that you have added the filebeat-configuration.yml file to /etc/ansible/files/ folder on your Elk-Server machine.
+
+- Ensure that you have added a remote user access, and be certain to not use a common username such as user or admin. For example, this line will read *remote_user = azadmin*
+![Ansible.cfg location](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/ansible_cfg_screenshot.png)
+-- A copy of the ansible.cfg file can be found here: ![Ansible.cfg](https://github.com/paulsbarrett/azure_web_deployment/blob/main/yaml_files/ansible.cfg)
 
 
