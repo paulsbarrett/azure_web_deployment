@@ -84,7 +84,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the install-elk.yml file to the /etc/ansible/ folder on the ansible container machine.
 - Update the install-elk.yml file to include the machines that you want to have the playbook action - in this case, the machine is Elk-server.
-- Update the hosts file found in /etc/ansible/hosts/ folder on the ansible container machine. check!
+- Update the hosts file found in /etc/ansible/ folder on the ansible container machine.
+![Hosts File Location](https://github.com/paulsbarrett/azure_web_deployment/blob/main/screenshots/hosts%20file%20location.png)
 - Run the playbook, and navigate to your Elk-server to check that the installation worked as expected. From your web browser, navigate to [Elk-serverIP]:5601/app/kibana which, in my case, was http://20.37.45.178:5601/app/kibana
 
 - Copy the install-elk.yml playbook file to the /etc/ansible/ folder on your ansible container machine.
@@ -104,5 +105,7 @@ From the command line, run
 - ssh azadmin@10.1.0.4 (to connect to Elk-server)
 - run exit to return to the docker container.
 - ssh azadmin@10.0.0.11 (to connect to Web-1 server)
+
+- Ensure that you have added the filebeat-configuration.yml file to /etc/ansible/files/ folder on your Elk-Server machine.
 
 
